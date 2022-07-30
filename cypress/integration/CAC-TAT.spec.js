@@ -188,13 +188,13 @@ it('verifica que a política de privacidade abre em outra aba sem a necessidade 
         //seletor                       //atributo target blank
     })
 
-    //it('acessa a página da política de privacidade removendo o target e então clicanco no link', function() { //define um caso de teste
-        //cy.get('#privacy a')
-        //.invoke('removeAttr', 'target')   //remove o target p nao abrir em outra aba usa o invoke                                                                                 
-        //.click()
+    it('acessa a página da política de privacidade removendo o target e então clicanco no link', function() { //define um caso de teste
+        cy.get('#privacy a')
+        .invoke('removeAttr', 'target')   //remove o target p nao abrir em outra aba usa o invoke                                                                                 
+        .click()
         
-       //cy.contains('Talking About Testing').should('be.visible') 
+       cy.contains('Talking About Testing').should('be.visible') 
         //verifica se possui o texto se e visivel abre na mesma aba 
-   // })
+    })
 })
  
