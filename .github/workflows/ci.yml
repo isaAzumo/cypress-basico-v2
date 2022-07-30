@@ -1,0 +1,12 @@
+name: End-to-end tests 🧪 #nome pipeline
+on: [push]                #vai ser disparado pelo git push
+jobs:
+  cypress-run:            #rodar os testes
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout #baixar o cod do projeto
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run #rodar o proj
+        uses: cypress-io/github-action@v2
